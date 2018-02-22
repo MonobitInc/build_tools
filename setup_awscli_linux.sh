@@ -1,4 +1,5 @@
-if [[ $ARCH = *"centos7"* ]]; then
+
+if [[ $1 = *"centos7"* ]]; then
     echo setup python for centos7        
     yum install -y -q https://centos7.iuscommunity.org/ius-release.rpm
     yum install -y -q python34
@@ -8,7 +9,7 @@ if [[ $ARCH = *"centos7"* ]]; then
     python get-pip.py
 fi
 
-if [[ $ARCH = *"centos6"* ]]; then
+if [[ $1 = *"centos6"* ]]; then
     echo setup python for centos6
     yum install -y -q python
     yum install -y -q python-pip
