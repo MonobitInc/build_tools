@@ -7,6 +7,7 @@ if [[ $1 = *"centos7"* ]]; then
     python --version
     curl "https://bootstrap.pypa.io/get-pip.py" -o "get-pip.py"
     python get-pip.py
+    pip install --upgrade pip
 fi
 
 if [[ $1 = *"centos6"* ]]; then
