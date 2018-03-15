@@ -3,6 +3,11 @@
 
 NDKVER=$1
 
+if [[ $NDKVER == "" ]]; then
+    echo invalid argument, need ndkver like r14b
+    exit 1
+fi
+
 echo setup ndk version: ${NDKVER}
 FULLVER=android-ndk-${NDKVER}
 ZIPFILE=${FULLVER}-linux-x86_64.zip
